@@ -1,0 +1,19 @@
+name: Trigger ADO Pipeline
+
+on:
+  push:
+    branches:
+      - '*'  # Change this to your desired branch
+
+jobs:
+  trigger_pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger ADO Pipeline
+        uses: Azure/pipelines@v1
+        with:
+          azure-devops-project-url: ${{ secrets.ADO_PROJECT_URL }}
+          azure-devops-token: ${{ secrets.ADO_PAT }}
+          pipeline-name: 'epr_packaging_frontend'
+          branch-name: 'main'
