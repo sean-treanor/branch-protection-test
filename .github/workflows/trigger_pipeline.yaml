@@ -2,8 +2,9 @@ name: Trigger ADO Pipeline
 
 on:
   push:
-    branches:
-      - '*'  # Change this to your desired branch
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
 
 jobs:
   trigger_pipeline:
