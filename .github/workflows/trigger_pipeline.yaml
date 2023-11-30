@@ -16,5 +16,4 @@ jobs:
         with:
           azure-devops-project-url: ${{ secrets.ADO_PROJECT_URL }}
           azure-devops-token: ${{ secrets.ADO_PAT }}
-          pipeline-name: 'epr_packaging_frontend'
-          branch-name: 'main'
+          azure-pipeline-name: 'epr_packaging_frontend'
